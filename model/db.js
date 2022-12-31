@@ -1,13 +1,6 @@
 mongoose = require('mongoose');
-var dbUrl = 'mongodb://localhost/agenagn';
-/*var dbUrl = "mongodb+srv://kalab:kalab.1@cluster0.nifwn.mongodb.net/kiray?retryWrites=true&w=majority";*/
+var dbUrl = process.env.MONGO_URL;
 
-/*
-if (process.env.NODE_ENV === 'production') {
-    dbUrl = "mongodb+srv://kalab:kalab.1@cluster0.nifwn.mongodb.net/kiray?retryWrites=true&w=majority";
-
-
-}*/
 mongoose.connect(dbUrl);
 
 // CONNECTION EVENTS
